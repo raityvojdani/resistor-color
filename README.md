@@ -47,29 +47,3 @@ If an invalid color is entered:
 ```css
 Invalid color 'pink' entered. Please enter a valid color from the list.
 ```
-
-## 📜 Code Explanation
-The project consists of two primary classes:
-
-Program:
-
-The entry point of the application.
-Handles user interaction and displays the color list.
-Collects user input and calls the ResistorColor class for code lookups.
-ResistorColor:
-
-Contains a predefined array of colors.
-Provides a method (ColorCode) to find the index (numeric value) of a color.
-Returns the list of colors using the Colors method.
-🔍 Color Code Mapping
-Color	Code
-Black	0
-Brown	1
-Red	2
-Orange	3
-Yellow	4
-Green	5
-Blue	6
-Violet	7
-Grey	8
-White	9
