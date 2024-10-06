@@ -24,12 +24,14 @@ The resistor color code is a way of representing resistance values using color b
    git clone https://github.com/yourusername/resistor_color.git
 
 
-##📖 Usage
+## 📖 Usage
 When the application starts, it displays the full list of resistor color bands.
 Enter a color name (e.g., red, blue, green) when prompted.
 The application will display the corresponding color code value.
 If you enter an invalid color name, the program will notify you to enter a valid color from the list.
-##📌 Example Output
+
+
+## 📌 Example Output
 Here’s an example of what the output might look like:
 
 ```yaml
@@ -45,7 +47,8 @@ If an invalid color is entered:
 ```css
 Invalid color 'pink' entered. Please enter a valid color from the list.
 ```
-##📜 Code Explanation
+
+## 📜 Code Explanation
 The project consists of two primary classes:
 
 Program:
