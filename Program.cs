@@ -1,14 +1,45 @@
 ﻿namespace resistor_color;
 
+/// <summary>
+/// Main program class for the Resistor Color Code Utility.
+/// </summary>
 internal class Program
 {
+    /// <summary>
+    /// Main method to run the Resistor Color Code Utility.
+    /// </summary>
+    /// <param name="args">Command-line arguments.</param>
     static void Main(string[] args)
     {
+        DisplayColorList();
+        string? inputColor = GetUserInput();
+        DisplayColorCode(inputColor);
+    }
+
+    /// <summary>
+    /// Displays the list of resistor colors.
+    /// </summary>
+    private static void DisplayColorList()
+    {
         Console.WriteLine("Color List: " + string.Join(", ", ResistorColor.Colors()));
+    }
 
+    /// <summary>
+    /// Gets the user input for the resistor color.
+    /// </summary>
+    /// <returns>The user input color.</returns>
+    private static string? GetUserInput()
+    {
         Console.WriteLine("Enter the color:");
-        string? inputColor = Console.ReadLine()?.Trim().ToLower();
+        return Console.ReadLine()?.Trim().ToLower();
+    }
 
+    /// <summary>
+    /// Displays the color code for the given color.
+    /// </summary>
+    /// <param name="inputColor">The input color.</param>
+    private static void DisplayColorCode(string? inputColor)
+    {
         int colorCode = ResistorColor.ColorCode(inputColor);
 
         if (colorCode != -1)

@@ -1,27 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace resistor_color;
-internal class ResistorColor
+namespace resistor_color
 {
-    public static string[] colors = { "black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white" };
-
-    public static int ColorCode(string color)
+    /// <summary>
+    /// Represents the Resistor Color Code Utility.
+    /// </summary>
+    internal class ResistorColor
     {
+        /// <summary>
+        /// Array of resistor colors.
+        /// </summary>
+        private static readonly string[] colors = { "black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white" };
 
-        for (int i = 0; i < colors.Length; i++)
+        /// <summary>
+        /// Gets the array of resistor colors.
+        /// </summary>
+        public static string[] Colors => colors;
+
+        /// <summary>
+        /// Gets the color code for the given color.
+        /// </summary>
+        /// <param name="color">The color name.</param>
+        /// <returns>The color code, or -1 if the color is not found.</returns>
+        public static int ColorCode(string color)
         {
-            if (colors[i] == color) { return i; }
-
+            return Array.IndexOf(colors, color);
         }
-        return -1;
-    }
-
-    public static string[] Colors()
-    {
-        return colors;
     }
 }
